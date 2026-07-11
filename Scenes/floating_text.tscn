@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ck8fpnbsbai6i"]
+
+[ext_resource type="Script" uid="uid://dexeoqpfhk4ki" path="res://Scripts/floating_text.gd" id="1_kfvxn"]
+
+[node name="FloatingText" type="RichTextLabel" unique_id=2118043612]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_font_sizes/normal_font_size = 22
+script = ExtResource("1_kfvxn")

@@ -47,15 +47,48 @@ text = "Fossils: "
 flat = true
 
 [node name="SellFossil" type="Button" parent="MarginContainer/TopPanel" unique_id=1431519979]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Sell all fossils"
-flat = true
 script = ExtResource("2_qdvrb")
 
 [node name="BottomPanel" type="HBoxContainer" parent="MarginContainer" unique_id=399233831]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_vertical = 8
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BottomPanel" unique_id=2060298819]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Tools" type="Button" parent="MarginContainer/BottomPanel/MarginContainer" unique_id=877324329]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Tools"
+
+[node name="UpgradeDigsite" type="Button" parent="MarginContainer/BottomPanel" unique_id=1740599004]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Upgrade Digsite"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/BottomPanel" unique_id=1266945207]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Staff" type="Button" parent="MarginContainer/BottomPanel/MarginContainer2" unique_id=316628934]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Staff"
 
 [connection signal="pressed" from="MarginContainer/TopPanel/SellFossil" to="MarginContainer/TopPanel/SellFossil" method="_on_pressed"]

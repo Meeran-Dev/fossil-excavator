@@ -52,8 +52,6 @@ func sell_all() -> void:
 	total_fossils = 0
 	fossils_changed.emit(total_fossils)
 	add_coins(coins_gained)
-	print("Earned " + str(coins_gained) + " Coins!")
-	print("Total Coins: " + str(coins) )
 
 func add_coins(amount: int) -> void:
 	coins += amount
