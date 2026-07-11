@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="fossil" format=3 uid="uid://leec4etrkjhg"]
 
 [ext_resource type="Script" uid="uid://djfxqfjds7eur" path="res://Scripts/fossil_resource.gd" id="1_jb44b"]
+[ext_resource type="Texture2D" uid="uid://cimpoi8eercql" path="res://Assets/Images/claw.png" id="2_1hwma"]
 
 [resource]
 script = ExtResource("1_jb44b")
 name = "Claw"
 value = 5
 weight = 35
+texture = ExtResource("2_1hwma")
 metadata/_custom_type_script = "uid://djfxqfjds7eur"

@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://bfq78cinqyese" path="res://Scripts/fossil_label.gd" id="2_2246s"]
 [ext_resource type="Script" uid="uid://bihhk40s1ha52" path="res://Scripts/sell_fossil.gd" id="2_qdvrb"]
 [ext_resource type="Texture2D" uid="uid://bj5qoxf038cgj" path="res://Assets/Images/trilobite.png" id="3_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://cimpoi8eercql" path="res://Assets/Images/claw.png" id="5_smcll"]
+[ext_resource type="Texture2D" uid="uid://82a1le7ad0ts" path="res://Assets/Images/tooth.png" id="6_ryf15"]
+[ext_resource type="Texture2D" uid="uid://bki06dx7a5uw1" path="res://Assets/Images/skin_frag.png" id="7_mmixe"]
 
 [node name="UI" type="Control" unique_id=915659650]
 layout_mode = 3
@@ -113,7 +116,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer2/VBoxContainer" unique_id=1531095925]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-texture = ExtResource("3_nf4gj")
+texture = ExtResource("5_smcll")
 expand_mode = 1
 stretch_mode = 5
 
@@ -141,7 +144,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer3/VBoxContainer" unique_id=2001487371]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-texture = ExtResource("3_nf4gj")
+texture = ExtResource("6_ryf15")
 expand_mode = 1
 stretch_mode = 5
 
@@ -169,7 +172,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer4/VBoxContainer" unique_id=940239349]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-texture = ExtResource("3_nf4gj")
+texture = ExtResource("7_mmixe")
 expand_mode = 1
 stretch_mode = 5
 

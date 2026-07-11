@@ -3,7 +3,7 @@ extends Node2D
 @export var coins : int
 @export var total_fossils : int
 @export var inventory : Dictionary
-var digsite_level : int
+var digsite_level : int = 1
 
 @export var trilobite = preload("res://Assets/Resources/trilobite.tres")
 @export var claw = preload("res://Assets/Resources/claw.tres")
@@ -17,7 +17,6 @@ signal coins_changed(new_amount)
 signal fossils_changed(new_amount, new_inv)
 
 func _ready() -> void:
-	digsite_level = 1
 	coins = 0
 	total_fossils = 0
 	inventory = {trilobite : 0,

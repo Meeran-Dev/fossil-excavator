@@ -1,7 +1,7 @@
 extends TextureButton
 
 var is_digging : bool = false
-var dig_time : float = 2.5
+var dig_time : float = 1.0
 var multiplier : int = GameManager.digsite_level
 
 @export var floating_text_scene: PackedScene

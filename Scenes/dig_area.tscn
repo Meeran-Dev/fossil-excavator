@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bndqu6ttkk1k6"]
 
+[ext_resource type="Texture2D" uid="uid://dmen6lbcss2cv" path="res://Assets/Images/digsite.png" id="1_7www1"]
 [ext_resource type="Script" uid="uid://decegful252t1" path="res://Scripts/dig_area.gd" id="1_lef7b"]
-[ext_resource type="Texture2D" uid="uid://bw56oi5xww4kg" path="res://icon.svg" id="1_uygnn"]
 [ext_resource type="PackedScene" uid="uid://ck8fpnbsbai6i" path="res://Scenes/floating_text.tscn" id="3_7www1"]
 
 [node name="DigArea" type="TextureButton" unique_id=762677407]
@@ -14,9 +14,9 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(40, 30)
-texture_normal = ExtResource("1_uygnn")
+texture_normal = ExtResource("1_7www1")
 ignore_texture_size = true
-stretch_mode = 6
+stretch_mode = 5
 script = ExtResource("1_lef7b")
 floating_text_scene = ExtResource("3_7www1")
 
