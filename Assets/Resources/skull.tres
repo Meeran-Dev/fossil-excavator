@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="fossil" format=3 uid="uid://p0gvbsy55cb4"]
+
+[ext_resource type="Script" uid="uid://djfxqfjds7eur" path="res://Scripts/fossil_resource.gd" id="1_s8ryq"]
+
+[resource]
+script = ExtResource("1_s8ryq")
+name = "Skull"
+value = 30
+weight = 5
+metadata/_custom_type_script = "uid://djfxqfjds7eur"

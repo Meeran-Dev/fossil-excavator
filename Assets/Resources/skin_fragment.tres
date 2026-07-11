@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="fossil" format=3 uid="uid://cn874jm2wiqbd"]
+
+[ext_resource type="Script" uid="uid://djfxqfjds7eur" path="res://Scripts/fossil_resource.gd" id="1_qf2y6"]
+
+[resource]
+script = ExtResource("1_qf2y6")
+name = "Skin Fragment"
+value = 20
+weight = 10
+metadata/_custom_type_script = "uid://djfxqfjds7eur"

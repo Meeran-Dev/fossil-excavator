@@ -7,4 +7,7 @@
 script = ExtResource("1_jjgbg")
 
 [node name="DigArea" parent="." unique_id=980886252 instance=ExtResource("2_bo1nx")]
-position = Vector2(560, 300)
+offset_left = 560.0
+offset_top = 300.0
+offset_right = 560.0
+offset_bottom = 300.0

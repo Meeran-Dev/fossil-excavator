@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="fossil" format=3 uid="uid://ri2bogak8f6t"]
+
+[ext_resource type="Script" uid="uid://djfxqfjds7eur" path="res://Scripts/fossil_resource.gd" id="1_7c75j"]
+
+[resource]
+script = ExtResource("1_7c75j")
+name = "Tooth"
+value = 10
+weight = 20
+metadata/_custom_type_script = "uid://djfxqfjds7eur"
