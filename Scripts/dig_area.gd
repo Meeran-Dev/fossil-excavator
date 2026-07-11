@@ -2,6 +2,7 @@ extends TextureButton
 
 var is_digging : bool = false
 var dig_time : float = 2.5
+var multiplier : int = GameManager.digsite_level
 
 @export var floating_text_scene: PackedScene
 
@@ -13,8 +14,8 @@ func _on_pressed() -> void:
 	is_digging = true
 	# add await for animation
 	await get_tree().create_timer(dig_time).timeout
-	GameManager.dig(2)
-	spawn_floating_text("+2", get_global_mouse_position())
+	GameManager.dig(multiplier)
+	spawn_floating_text("+" + str(GameManager.digsite_level), get_global_mouse_position())
 	
 	is_digging = false
 

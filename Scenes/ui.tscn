@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dw81dpjebophw"]
 
 [ext_resource type="Script" uid="uid://cdqbaxpwl0ixl" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Script" uid="uid://bfq78cinqyese" path="res://Scripts/fossil_label.gd" id="2_2246s"]
 [ext_resource type="Script" uid="uid://bihhk40s1ha52" path="res://Scripts/sell_fossil.gd" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://bj5qoxf038cgj" path="res://Assets/Images/trilobite.png" id="3_nf4gj"]
 
 [node name="UI" type="Control" unique_id=915659650]
 layout_mode = 3
@@ -33,7 +35,7 @@ size_flags_vertical = 0
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 24
-text = "Coins: "
+text = "Coins: 0"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
@@ -43,8 +45,9 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Fossils: "
+text = "Fossils: 0"
 flat = true
+script = ExtResource("2_2246s")
 
 [node name="SellFossil" type="Button" parent="MarginContainer/TopPanel" unique_id=1431519979]
 custom_minimum_size = Vector2(200, 0)
@@ -52,6 +55,161 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Sell all fossils"
 script = ExtResource("2_qdvrb")
+
+[node name="InventoryPanel" type="Panel" parent="MarginContainer" unique_id=417670940]
+visible = false
+z_index = 1
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FossilInventory" type="HBoxContainer" parent="MarginContainer/InventoryPanel" unique_id=1128054072]
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 0
+offset_right = 1088.0
+offset_bottom = 262.0
+size_flags_vertical = 4
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/InventoryPanel/FossilInventory" unique_id=1110590743]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer" unique_id=289715310]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer/VBoxContainer" unique_id=365954233]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("3_nf4gj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer/VBoxContainer" unique_id=731645430]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "Trilobite
+Amount: 0
+Value: 1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/InventoryPanel/FossilInventory" unique_id=904289816]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer2" unique_id=899819828]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer2/VBoxContainer" unique_id=1531095925]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("3_nf4gj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer2/VBoxContainer" unique_id=1493911894]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "Claw
+Amount: 0
+Value: 5"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/InventoryPanel/FossilInventory" unique_id=1778211837]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer3" unique_id=734115453]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer3/VBoxContainer" unique_id=2001487371]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("3_nf4gj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer3/VBoxContainer" unique_id=1492004475]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "Tooth
+Amount: 0
+Value: 10"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/InventoryPanel/FossilInventory" unique_id=961747891]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer4" unique_id=152924991]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer4/VBoxContainer" unique_id=940239349]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("3_nf4gj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer4/VBoxContainer" unique_id=1305503249]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "Skin Fragment
+Amount: 0
+Value: 20"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/InventoryPanel/FossilInventory" unique_id=856984834]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer5" unique_id=167862978]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer5/VBoxContainer" unique_id=221134886]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("3_nf4gj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/InventoryPanel/FossilInventory/MarginContainer5/VBoxContainer" unique_id=488523513]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "Skull
+Amount: 0
+Value: 30"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BottomPanel" type="HBoxContainer" parent="MarginContainer" unique_id=399233831]
 custom_minimum_size = Vector2(0, 120)
@@ -91,4 +249,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Staff"
 
+[connection signal="pressed" from="MarginContainer/TopPanel/FossilLabel" to="MarginContainer/TopPanel/FossilLabel" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/TopPanel/SellFossil" to="MarginContainer/TopPanel/SellFossil" method="_on_pressed"]

@@ -3,6 +3,7 @@ extends Node2D
 @export var coins : int
 @export var total_fossils : int
 @export var inventory : Dictionary
+var digsite_level : int
 
 @export var trilobite = preload("res://Assets/Resources/trilobite.tres")
 @export var claw = preload("res://Assets/Resources/claw.tres")
@@ -13,9 +14,10 @@ extends Node2D
 @export var total_weight = 120
 
 signal coins_changed(new_amount)
-signal fossils_changed(new_amount)
+signal fossils_changed(new_amount, new_inv)
 
 func _ready() -> void:
+	digsite_level = 1
 	coins = 0
 	total_fossils = 0
 	inventory = {trilobite : 0,
@@ -40,7 +42,7 @@ func dig(multiplier := 1.0) -> void:
 		var fossil_found = choose_random_fossil()
 		inventory[fossil_found] += 1
 		total_fossils += 1
-		fossils_changed.emit(total_fossils)
+		fossils_changed.emit(total_fossils, inventory)
 		print("Found a " + fossil_found.name)
 	print(inventory)
 
@@ -50,9 +52,12 @@ func sell_all() -> void:
 		coins_gained += key.value * inventory[key]
 		inventory[key] = 0
 	total_fossils = 0
-	fossils_changed.emit(total_fossils)
+	fossils_changed.emit(total_fossils, inventory)
 	add_coins(coins_gained)
 
 func add_coins(amount: int) -> void:
-	coins += amount
+	coins += amount * digsite_level
 	coins_changed.emit(coins)
+
+func upgrade_digsite():
+	digsite_level += 1
