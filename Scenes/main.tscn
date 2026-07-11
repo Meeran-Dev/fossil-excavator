@@ -2,12 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bdod6eidijw3f" path="res://Scripts/game_manager.gd" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://bndqu6ttkk1k6" path="res://Scenes/dig_area.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dw81dpjebophw" path="res://Scenes/ui.tscn" id="3_8gbba"]
 
 [node name="Main" type="Node2D" unique_id=1051903566]
 script = ExtResource("1_jjgbg")
 
+[node name="UI" parent="." unique_id=915659650 instance=ExtResource("3_8gbba")]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
+
 [node name="DigArea" parent="." unique_id=980886252 instance=ExtResource("2_bo1nx")]
-offset_left = 560.0
-offset_top = 300.0
-offset_right = 560.0
-offset_bottom = 300.0
+offset_left = 559.0
+offset_top = 299.0
+offset_right = 561.0
+offset_bottom = 301.0

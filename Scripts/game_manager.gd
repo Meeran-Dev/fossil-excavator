@@ -12,6 +12,9 @@ extends Node2D
 
 @export var total_weight = 120
 
+signal coins_changed(new_amount)
+signal fossils_changed(new_amount)
+
 func _ready() -> void:
 	coins = 0
 	total_fossils = 0
@@ -36,5 +39,22 @@ func dig(multiplier := 1.0) -> void:
 	for i in range(multiplier):
 		var fossil_found = choose_random_fossil()
 		inventory[fossil_found] += 1
+		total_fossils += 1
+		fossils_changed.emit(total_fossils)
 		print("Found a " + fossil_found.name)
 	print(inventory)
+
+func sell_all() -> void:
+	var coins_gained = 0
+	for key in inventory:
+		coins_gained += key.value * inventory[key]
+		inventory[key] = 0
+	total_fossils = 0
+	fossils_changed.emit(total_fossils)
+	add_coins(coins_gained)
+	print("Earned " + str(coins_gained) + " Coins!")
+	print("Total Coins: " + str(coins) )
+
+func add_coins(amount: int) -> void:
+	coins += amount
+	coins_changed.emit(coins)

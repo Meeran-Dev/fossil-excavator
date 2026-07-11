@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dw81dpjebophw"]
+
+[ext_resource type="Script" uid="uid://cdqbaxpwl0ixl" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Script" uid="uid://bihhk40s1ha52" path="res://Scripts/sell_fossil.gd" id="2_qdvrb"]
+
+[node name="UI" type="Control" unique_id=915659650]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxero")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1901474675]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TopPanel" type="HBoxContainer" parent="MarginContainer" unique_id=310347644]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="CoinLabel" type="RichTextLabel" parent="MarginContainer/TopPanel" unique_id=964036434]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "Coins: "
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FossilLabel" type="Button" parent="MarginContainer/TopPanel" unique_id=1701533691]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Fossils: "
+flat = true
+
+[node name="SellFossil" type="Button" parent="MarginContainer/TopPanel" unique_id=1431519979]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Sell all fossils"
+flat = true
+script = ExtResource("2_qdvrb")
+
+[node name="BottomPanel" type="HBoxContainer" parent="MarginContainer" unique_id=399233831]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 8
+
+[connection signal="pressed" from="MarginContainer/TopPanel/SellFossil" to="MarginContainer/TopPanel/SellFossil" method="_on_pressed"]
